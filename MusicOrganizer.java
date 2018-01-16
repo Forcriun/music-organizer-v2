@@ -100,10 +100,15 @@ public class MusicOrganizer
      * @param searchString La cadena que hay que buscar.
      */
     public void listMatching(String searchString){
+        boolean hayCoincidencias = false;
         for(String filename : files){
             if(filename.contains(searchString)){
                 System.out.println(filename);
+                hayCoincidencias = true;
             }
+        }
+        if(!hayCoincidencias){
+            System.out.println("No hay ningún archivo con ese nombre.");
         }
     }
 }
