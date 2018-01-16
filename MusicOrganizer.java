@@ -128,13 +128,14 @@ public class MusicOrganizer
      * Metodo que localiza el indice del primer archivo que se corresponde
      * con la cadena de busqueda indicada.
      * @param searchString La cadena que hay que buscar.
-     * @retunr El indice de la primera aparicion, es decir -1 si no se 
+     * @return El indice de la primera aparicion, es decir -1 si no se 
      * encuentra ninguna correspondencia.
      */
     public int findFirst(String searchString){
         int index = 0;
         boolean searching = true;
-        while(searching && index < files.size()){
+        int collectionSize = files.size();
+        while(searching && index < collectionSize){
             String filename = files.get(index);
             if(filename.contains(searchString)){
                 searching = false;
