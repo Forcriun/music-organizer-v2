@@ -111,4 +111,16 @@ public class MusicOrganizer
             System.out.println("No hay ningún archivo con ese nombre.");
         }
     }
+
+    /**
+     * Metodo que reproduce muestras de todas las canciones de un artista
+     * de la coleccion.
+     */
+    public void playArtistSamples(String artist){
+        for (String filename : files){
+            if(filename.contains(artist)){
+                player.playSample(filename);
+            }
+        }
+    }
 }
